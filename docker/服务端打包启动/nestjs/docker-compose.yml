@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app: # 服务名称
+    container_name: app-server # 容器名称
+    build: # 构建配置
+      context: . # 上下文路径
+      dockerfile: Dockerfile # Dockerfile 文件路径
+    restart: always # 重启策略
+    ports:
+      - "3000:3000" # 端口映射
